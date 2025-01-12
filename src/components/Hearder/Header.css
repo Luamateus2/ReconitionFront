@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --primary-color: #003366; /* Cor principal */
+    --text-color: white;      /* Cor do texto */
+}
+
+.header {
+    display: flex;
+    background-color: var(--primary-color); /* Uso da variável */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10vh;
+    position: fixed; /* Fixar no topo */
+    top: 0; /* Define a posição no topo */
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+.header-title {
+    color: var(--text-color); /* Uso da variável */
+}

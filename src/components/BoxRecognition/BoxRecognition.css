@@ -1,0 +1,64 @@
+/* Container principal para centralizar o conteúdo na tela */
+.container {
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente no meio */
+    align-items: flex-start; /* Alinha ao topo da tela */
+    height: 100vh; /* 100% da altura da tela */
+    padding-top: 20px; /* Adiciona espaço entre o topo da tela e a grid */
+}
+
+/* Layout da grid com 2 colunas */
+.box-recognition {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas de largura igual */
+    grid-template-rows: repeat(2, auto); /* Linhas automáticas conforme o conteúdo */
+    gap: 25px; /* Espaço entre as caixas */
+    width: 100%; /* 100% da largura do contêiner */
+    max-width: 1000px; /* Limita a largura máxima da grid */
+    margin: 0 auto; /* Centraliza a grid horizontalmente */
+    padding-top: 20px; /* Espaço entre o topo da tela e a grid */
+    box-sizing: border-box; /* Garante que o padding seja incluído nas dimensões */
+}
+
+/* Estilo das caixas */
+.box {
+    background-color: #2A76C1;
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo em coluna */
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    width: 500px; /* A largura fixada das caixas */
+    height: 250px; /* Altura fixa para cada caixa */
+    padding: 20px;
+    text-align: center; /* Centraliza o texto */
+    border-radius: 10px; /* Caixas levemente arredondadas */
+    box-sizing: border-box; /* Inclui padding e borda no tamanho total */
+}
+
+/* Estilo da imagem dentro das caixas */
+.box-imagem {
+    max-width: 80%; /* Ajusta a largura da imagem para não ultrapassar a caixa */
+    max-height: 60%; /* Ajusta a altura da imagem para não ultrapassar a caixa */
+    object-fit: contain; /* Garante que a imagem mantenha sua proporção */
+}
+
+/* Estilo do título dentro das caixas */
+.box-title {
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 10px; /* Espaço entre a imagem e o título */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .box-recognition {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+        grid-template-rows: repeat(4, auto); /* Quatro linhas automáticas */
+        width: 90%; /* Aumenta a largura das caixas em telas menores */
+    }
+
+    .box {
+        width: 90%; /* Largura ajustada para 90% em telas menores */
+        height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    }
+}

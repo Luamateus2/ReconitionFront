@@ -1,0 +1,27 @@
+:root {
+    --primary-color: #003366; /* Cor principal */
+    --text-color: white;      /* Cor do texto */
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.main{
+    height: calc(100vh - 10vh); 
+
+}
+.title-main {
+    padding-top: 2vh;
+
+    padding-bottom: 1vh;
+    font-size: 2rem; 
+    color: var(--primary-color) ; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: flex-start; 
+    margin-top: 10vh;
+    text-align: center; 
+}

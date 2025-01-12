@@ -1,0 +1,60 @@
+/* Estilos para o container do componente */
+*{
+    margin: 0;
+    padding: 0;
+}
+.recognition-image {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    margin-top: 80px; /* Espaço para não sobrepor o header */
+  }
+  
+  /* Container do campo de upload de imagem e botão */
+  .upload-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha tudo à esquerda */
+    gap: 20px;
+    width: 100%;
+  }
+  
+  /* Estilo do campo de upload de arquivo */
+  .upload-label {
+    display: inline-block;
+    padding: 15px;
+    background-color: white;
+    color: black;
+    border: 1px solid rgba(0, 0, 0, 0.144); /* Borda preta */
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: left;
+    width: 95%; /* O campo ocupa 100% da largura */
+    box-sizing: border-box;
+    text-transform: uppercase;
+    margin-bottom: 10px; /* Distância entre o campo e o botão */
+  }
+  
+  /* Escondendo o campo real de input */
+  .upload-input {
+    display: none;
+  }
+  
+  /* Estilo do botão de envio */
+  .submit-button {
+    padding: 12px 25px;
+    background-color: #2A76C1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .submit-button:hover {
+    background-color: #1e5b8e;
+  }
+  
