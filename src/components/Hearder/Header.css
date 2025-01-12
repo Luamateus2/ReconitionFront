@@ -1,7 +1,4 @@
-*{
-    padding: 0;
-    margin: 0;
-}
+
 :root {
     --primary-color: #003366; /* Cor principal */
     --text-color: white;      /* Cor do texto */
