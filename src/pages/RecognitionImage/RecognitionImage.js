@@ -22,7 +22,7 @@ function RecognitionImage() {
 
         <div className="upload-container">
           <h2 className='title-main'>
-            < img src = {setapraesquerda}/>
+            
               RECONHECIMENTO DE IMAGEM
           </h2>
           

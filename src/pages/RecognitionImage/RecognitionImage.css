@@ -1,4 +1,3 @@
-/* Resetando padding e margin globalmente para garantir o comportamento correto */
 * {
   margin: 0;
   padding: 0;
@@ -7,14 +6,10 @@
 .title-main {
   display: flex;
   justify-content: center; /* Centraliza o conteúdo horizontalmente */
-  align-items: center;     /* Garante que o conteúdo fique no meio verticalmente dentro do contêiner */
   font-size: 30px;
   color: #1e5b8e;
-  width: 100%;             /* O contêiner vai ocupar toda a largura disponível */
-}
-.title-main img{
-
-  padding-right: 1vh;
+  width: 100%;     
+  margin: 0;/* O contêiner vai ocupar toda a largura disponível */
 }
 
 /* Estilo para o container da imagem */
