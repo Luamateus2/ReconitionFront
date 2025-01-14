@@ -1,60 +1,61 @@
-import React, { useState } from 'react';
+// src/views/RecognitionImage.js
+import React from 'react';
 import Header from '../../components/Hearder/Header';
+import useRecognitionController from '../../controllers/RecognitionController';
 import './RecognitionImage.css';
-function RecognitionImage() {
-  const [fileName, setFileName] = useState(null); // Estado para armazenar o nome do arquivo selecionado
 
-  // Função para lidar com a mudança de imagem
-  const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      setFileName(file.name); // Atualiza o nome do arquivo
-    } else {
-      setFileName(null); // Se não houver arquivo, reseta o nome
-    }
-  };
+const RecognitionImage = () => {
+  const { fileName, result, handleFileChange, handleSubmit } = useRecognitionController();
 
   return (
     <>
-      <Header /> 
-      <h2 className='title-main'>
-              RECONHECIMENTO DE IMAGEM
-      </h2>
-      <div className='recognition-image'>   
-            <div className="upload-container">
-            
-              
-
-              {/* Container do campo de upload */}
-              <div className="upload-input-container">
-                {/* Texto "Escolher arquivo", clicável */}
-                <div className='cinza-upload'>
-                    <label htmlFor="file-upload" className="upload-label">
-                      Escolher arquivo   |
-                    </label>
-                </div>
-                {/* Campo de input real */}
-                <input
-                  type="file"
-                  id="file-upload"
-                  onChange={handleFileChange}
-                  className="upload-input"
-                />
-
-                {/* Texto para exibir o nome do arquivo ou "Nenhum arquivo selecionado" */}
-                <span className="upload-file-name">
-                  {fileName ? fileName : 'Nenhum arquivo selecionado'}
-                </span>
-              </div>
-
-              {/* Botão de Enviar */}
-              <button className="submit-button">
-                Enviar
-              </button>
+      <Header />
+      <h2 className='title-main'>RECONHECIMENTO DE IMAGEM</h2>
+      <div className='recognition-image'>
+        <div className="upload-container">
+          <div className="upload-input-container">
+            <div className='cinza-upload'>
+              <label htmlFor="file-upload" className="upload-label">
+                Escolher arquivo |
+              </label>
             </div>
-      </div>      
+            <input
+              type="file"
+              id="file-upload"
+              onChange={handleFileChange}
+              className="upload-input"
+            />
+            <span className="upload-file-name">
+              {fileName ? fileName : 'Nenhum arquivo selecionado'}
+            </span>
+          </div>
+
+          <button className="submit-button" onClick={handleSubmit}>
+            Enviar
+          </button>
+        </div>
+
+        {result && (
+          <div className="result-container">
+            <h3>Resultado:</h3>
+            {result.error ? (
+              <p>{result.error}</p>
+            ) : (
+              result.map((item, index) => (
+                <div key={index}>
+                  <p><strong>Nome:</strong> {item.name}</p>
+                  <p>CPF:{item.cpf} </p>
+                  <p>RG:{item.rg}</p>
+                  <p>Nome do Pai:{item.nome_pai}</p>
+                  <p>Nome da mãe: {item.nome_mae}</p>  
+                </div>
+              ))
+            )}
+          </div>
+        )}
+      </div>
     </>
   );
-}
+};
 
 export default RecognitionImage;
