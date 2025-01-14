@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Header from '../../components/Hearder/Header';
 import './RecognitionImage.css';
-import setapraesquerda from '../../assets/img/seta-esquerda.png';
 function RecognitionImage() {
   const [fileName, setFileName] = useState(null); // Estado para armazenar o nome do arquivo selecionado
 
@@ -17,45 +16,43 @@ function RecognitionImage() {
 
   return (
     <>
-      <Header />
-      <div className="recognition-image">
-
-        <div className="upload-container">
-          <h2 className='title-main'>
-            
+      <Header /> 
+      <h2 className='title-main'>
               RECONHECIMENTO DE IMAGEM
-          </h2>
-          
-          <h3>Escolha uma Imagem para enviar</h3>
+      </h2>
+      <div className='recognition-image'>   
+            <div className="upload-container">
+            
+              
 
-          {/* Container do campo de upload */}
-          <div className="upload-input-container">
-            {/* Texto "Escolher arquivo", clicável */}
-            <div className='cinza-upload'>
-                <label htmlFor="file-upload" className="upload-label">
-                  Escolher arquivo|
-                </label>
+              {/* Container do campo de upload */}
+              <div className="upload-input-container">
+                {/* Texto "Escolher arquivo", clicável */}
+                <div className='cinza-upload'>
+                    <label htmlFor="file-upload" className="upload-label">
+                      Escolher arquivo   |
+                    </label>
+                </div>
+                {/* Campo de input real */}
+                <input
+                  type="file"
+                  id="file-upload"
+                  onChange={handleFileChange}
+                  className="upload-input"
+                />
+
+                {/* Texto para exibir o nome do arquivo ou "Nenhum arquivo selecionado" */}
+                <span className="upload-file-name">
+                  {fileName ? fileName : 'Nenhum arquivo selecionado'}
+                </span>
+              </div>
+
+              {/* Botão de Enviar */}
+              <button className="submit-button">
+                Enviar
+              </button>
             </div>
-            {/* Campo de input real */}
-            <input
-              type="file"
-              id="file-upload"
-              onChange={handleFileChange}
-              className="upload-input"
-            />
-
-            {/* Texto para exibir o nome do arquivo ou "Nenhum arquivo selecionado" */}
-            <span className="upload-file-name">
-              {fileName ? fileName : 'Nenhum arquivo selecionado'}
-            </span>
-          </div>
-
-          {/* Botão de Enviar */}
-          <button className="submit-button">
-            Enviar
-          </button>
-        </div>
-      </div>
+      </div>      
     </>
   );
 }

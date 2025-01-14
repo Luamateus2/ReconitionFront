@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
 :root {
     --primary-color: #003366; /* Cor principal */
     --text-color: white;      /* Cor do texto */
@@ -6,15 +8,15 @@
 *{
     padding: 0;
     margin: 0;
-}
+    font-family: 'Instrument Sans', serif;
+} 
 
 .main{
     height: calc(100vh - 10vh); 
 
 }
 .title-main {
-    padding-top: 2vh;
-
+    padding-top: 15vh;
     padding-bottom: 1vh;
     font-size: 2rem; 
     color: var(--primary-color) ; 

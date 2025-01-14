@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Instrument Sans', serif;
+
 }
+
 .title-main {
   display: flex;
   justify-content: center; /* Centraliza o conteúdo horizontalmente */
@@ -14,11 +18,9 @@
 
 /* Estilo para o container da imagem */
 .recognition-image {
-  padding: 20px;
+  padding-left: 15vh;
   display: flex;
-  flex-direction: column;
   align-items: flex-start;
-  margin-top: 80px;
   width: 100%;
 }
 
@@ -29,9 +31,12 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
-  width: 100%;
+  width: 90%;
 }
-
+.title-input{
+  color:#1e5b8e;
+  font-size: 25px;
+}
 /* Estilo do campo de upload de arquivo (parte do "Escolher arquivo" e "Nenhum arquivo selecionado") */
 .upload-input-container {
   display: flex;
