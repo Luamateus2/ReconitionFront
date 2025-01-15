@@ -1,12 +1,12 @@
 
 :root {
-    --primary-color: #003366; /* Cor principal */
-    --text-color: white;      /* Cor do texto */
+    --blue-strong: #003366; /* Cor principal */
+    --white: white;      /* Cor do texto */
 }
 
 .header {
     display: flex;
-    background-color: var(--primary-color); /* Uso da variável */
+    background-color: var(--blue-strong); /* Uso da variável */
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -17,5 +17,5 @@
 }
 
 .header-title {
-    color: var(--text-color); /* Uso da variável */
+    color: var(--white); /* Uso da variável */
 }
