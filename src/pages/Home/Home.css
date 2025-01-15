@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
 
 :root {
-    --primary-color: #003366; /* Cor principal */
-    --text-color: white;      /* Cor do texto */
+    --blue-strong: #003366; 
+
 }
 
 *{
@@ -19,7 +19,7 @@
     padding-top: 15vh;
     padding-bottom: 1vh;
     font-size: 2rem; 
-    color: var(--primary-color) ; 
+    color: var(--blue-strong) ; 
     display: flex; 
     flex-direction: column; 
     align-items: center; 

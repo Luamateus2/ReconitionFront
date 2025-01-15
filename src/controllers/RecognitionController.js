@@ -1,4 +1,3 @@
-// src/controllers/RecognitionController.js
 import { useState } from 'react';
 import { uploadImage } from '../models/ImageModel';
 
@@ -7,7 +6,6 @@ const useRecognitionController = () => {
   const [file, setFile] = useState(null);
   const [result, setResult] = useState(null);
 
-  // Função para lidar com a mudança do arquivo
   const handleFileChange = (e) => {
     const selectedFile = e.target.files[0];
     if (selectedFile) {
@@ -19,7 +17,6 @@ const useRecognitionController = () => {
     }
   };
 
-  // Função para enviar o arquivo
   const handleSubmit = async () => {
     if (!file) {
       alert('Por favor, selecione um arquivo.');

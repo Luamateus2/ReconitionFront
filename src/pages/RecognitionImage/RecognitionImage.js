@@ -23,7 +23,7 @@ const RecognitionImage = () => {
           <div className="upload-input-container">
             <div className='cinza-upload'>
               <label htmlFor="file-upload" className="upload-label">
-                Escolher arquivo |
+                  Selecione Arquivo
               </label>
             </div>
             <input
@@ -31,7 +31,7 @@ const RecognitionImage = () => {
               id="file-upload"
               onChange={(e) => {
                 handleFileChange(e);
-                handleImageChange(e); // Atualiza a pré-visualização da imagem
+                handleImageChange(e); 
               }}
               className="upload-input"
             />
@@ -80,7 +80,6 @@ const RecognitionImage = () => {
                   <p><strong>Nome do Pai: </strong>{item.nome_pai}</p>
                   <p><strong>Nome da mãe:</strong>{item.nome_mae}</p>
 
-                  {/* Debugging: Verifique a URL da imagem */}
                   {console.log("Imagem URL:", item.image_url)}
                 </div>
               ))
